@@ -7,7 +7,7 @@ ARG site=site-forms-demo-1.0.0-SNAPSHOT
 WORKDIR /app
 ADD pom.xml /app/pom.xml
 ADD dump.sql /app/dump.sql
-ADD webapp /app/webapp
+#ADD webapp /app/webapp
 RUN mvn lutece:site-assembly
 
 # change default user

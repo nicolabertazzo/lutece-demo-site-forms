@@ -318,7 +318,7 @@ CREATE TABLE `core_admin_user` (
 
 LOCK TABLES `core_admin_user` WRITE;
 /*!40000 ALTER TABLE `core_admin_user` DISABLE KEYS */;
-INSERT INTO `core_admin_user` VALUES (1,'admin','Admin','admin','admin@lutece.fr',0,'PBKDF2WITHHMACSHA512:40000:2e5f5f066cf14663aa1b58a35ec8c158:51e9f191a3e0c37707ed18ca582c9d97a7f082c17cf9a2d6071058aac7030fc043dcfe8fbdd8116a20ee19ea888a14ce940cc5ef68f13f1c9055a00f2d8cdb9a6940670bc5971be140dd57107cb0a2745a8b06155e46d6e60cadff078872b62caa2b89ebece351e84844d40434d359e78b952ec47c81c96e2ac03eceed4c69e4','fr',0,0,0,'2019-06-07 15:14:43',1581090677984,0,'2019-02-07 15:51:17','all'),(2,'lutece','Lutèce','lutece','lutece@lutece.fr',1,'PLAINTEXT:adminadmin','fr',1,0,0,NULL,NULL,0,'1979-12-31 23:00:00','all'),(3,'redac','redac','redac','redac@lutece.fr',1,'PLAINTEXT:adminadmin','fr',2,0,0,NULL,NULL,0,'1979-12-31 23:00:00','all'),(4,'valid','valid','valid','valid@lutece.fr',1,'PLAINTEXT:adminadmin','fr',3,0,0,NULL,NULL,0,'1979-12-31 23:00:00','all');
+INSERT INTO `core_admin_user` VALUES (1,'admin','Admin','admin','admin@lutece.fr',0,'PBKDF2WITHHMACSHA512:40000:2e5f5f066cf14663aa1b58a35ec8c158:51e9f191a3e0c37707ed18ca582c9d97a7f082c17cf9a2d6071058aac7030fc043dcfe8fbdd8116a20ee19ea888a14ce940cc5ef68f13f1c9055a00f2d8cdb9a6940670bc5971be140dd57107cb0a2745a8b06155e46d6e60cadff078872b62caa2b89ebece351e84844d40434d359e78b952ec47c81c96e2ac03eceed4c69e4','fr',0,0,0,'2019-06-07 15:14:43',1581153632787,0,'2019-02-08 09:20:32','all'),(2,'lutece','Lutèce','lutece','lutece@lutece.fr',1,'PLAINTEXT:adminadmin','fr',1,0,0,NULL,NULL,0,'1979-12-31 23:00:00','all'),(3,'redac','redac','redac','redac@lutece.fr',1,'PLAINTEXT:adminadmin','fr',2,0,0,NULL,NULL,0,'1979-12-31 23:00:00','all'),(4,'valid','valid','valid','valid@lutece.fr',1,'PLAINTEXT:adminadmin','fr',3,0,0,NULL,NULL,0,'1979-12-31 23:00:00','all');
 /*!40000 ALTER TABLE `core_admin_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -580,7 +580,7 @@ CREATE TABLE `core_datastore` (
 
 LOCK TABLES `core_datastore` WRITE;
 /*!40000 ALTER TABLE `core_datastore` DISABLE KEYS */;
-INSERT INTO `core_datastore` VALUES ('core.advanced_parameters.password_duration','120'),('core.advanced_parameters.default_user_level','0'),('core.advanced_parameters.default_user_notification','1'),('core.advanced_parameters.default_user_language','fr'),('core.advanced_parameters.default_user_status','0'),('core.advanced_parameters.email_pattern','^[\\w_.\\-!\\#\\$\\%\\&\'\\*\\+\\/\\=\\?\\^\\`\\}\\{\\|\\~]+@[\\w_.\\-]+\\.[\\w]+$'),('core.advanced_parameters.email_pattern_verify_by',''),('core.advanced_parameters.force_change_password_reinit','false'),('core.advanced_parameters.password_minimum_length','8'),('core.advanced_parameters.password_format_upper_lower_case','false'),('core.advanced_parameters.password_format_numero','false'),('core.advanced_parameters.password_format_special_characters','false'),('core.advanced_parameters.password_history_size',''),('core.advanced_parameters.maximum_number_password_change',''),('core.advanced_parameters.tsw_size_password_change',''),('core.advanced_parameters.use_advanced_security_parameters',''),('core.advanced_parameters.account_life_time','12'),('core.advanced_parameters.time_before_alert_account','30'),('core.advanced_parameters.nb_alert_account','2'),('core.advanced_parameters.time_between_alerts_account','10'),('core.advanced_parameters.access_failures_max','3'),('core.advanced_parameters.access_failures_interval','10'),('core.advanced_parameters.expired_alert_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.expired_alert_mail_subject','Votre compte a expiré'),('core.advanced_parameters.first_alert_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.first_alert_mail_subject','Votre compte va bientôt expirer'),('core.advanced_parameters.other_alert_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.other_alert_mail_subject','Votre compte va bientôt expirer'),('core.advanced_parameters.account_reactivated_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.account_reactivated_mail_subject','Votre compte a bien été réactivé'),('core.advanced_parameters.access_failures_captcha','1'),('core.advanced_parameters.notify_user_password_expired',''),('core.advanced_parameters.password_expired_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.password_expired_mail_subject','Votre mot de passe a expiré'),('core.advanced_parameters.reset_token_validity','60'),('core.advanced_parameters.lock_reset_token_to_session','false'),('core.backOffice.defaultEditor','tinymce'),('core.frontOffice.defaultEditor','markitupbbcode'),('core_banned_domain_names','yopmail.com'),('portal.site.site_property.name','LUTECE'),('portal.site.site_property.meta.author','<author>'),('portal.site.site_property.meta.copyright','<copyright>'),('portal.site.site_property.meta.description','<description>'),('portal.site.site_property.meta.keywords','<keywords>'),('portal.site.site_property.email','<webmaster email>'),('portal.site.site_property.noreply_email','no-reply@mydomain.com'),('portal.site.site_property.home_url','jsp/site/Portal.jsp'),('portal.site.site_property.admin_home_url','jsp/admin/AdminMenu.jsp'),('portal.site.site_property.popup_credits.textblock','&lt;credits text&gt;'),('portal.site.site_property.popup_legal_info.copyright.textblock','&lt;copyright text&gt;'),('portal.site.site_property.popup_legal_info.privacy.textblock','&lt;privacy text&gt;'),('portal.site.site_property.logo_url','images/logo-header-icon.png'),('portal.site.site_property.menu.position','top'),('portal.site.site_property.locale.default','fr'),('portal.site.site_property.avatar_default','images/admin/skin/unknown.png'),('portal.site.site_property.back_images','\'images/admin/skin/bg_login1.jpg\' , \'images/admin/skin/bg_login2.jpg\' , \'images/admin/skin/bg_login3.jpg\' , \'images/admin/skin/bg_login4.jpg\''),('adminavatar.site_property.avatarserver.Url',''),('limitconnectedusers.site_property.limit_message.textblock','<div class=\'alert alert-danger\'>Le nombre maximal d\'utilisateur connecté simultanément a été atteint</div>'),('limitconnectedusers.site_property.limit_notification_mailing_list.textblock',''),('limitconnectedusers.site_property.limit_notification_message.textblock','Le nombre maximal d\'utilisateur connecté simultanément a été atteint'),('limitconnectedusers.site_property.limit_notification_sender_name','LUTECE'),('limitconnectedusers.site_property.limit_notification_subject.textblock','Le nombre maximal d\'utilisateur connecté simultanément a été atteint'),('mylutece.security.public_url.mylutece.url.login.page','jsp/site/Portal.jsp?page=mylutece&action=login'),('mylutece.security.public_url.mylutece.url.doLogin','jsp/site/plugins/mylutece/DoMyLuteceLogin.jsp'),('mylutece.security.public_url.mylutece.url.doLogout','jsp/site/plugins/mylutece/DoMyLuteceLogout.jsp'),('mylutece.security.public_url.mylutece.url.createAccount.page','jsp/site/Portal.jsp?page=mylutece&action=createAccount'),('mylutece.security.public_url.mylutece.url.modifyAccount.page','jsp/site/Portal.jsp?page=mylutece&action=modifyAccount'),('mylutece.security.public_url.mylutece.url.lostPassword.page','jsp/site/Portal.jsp?page=mylutece&action=lostPassword'),('mylutece.security.public_url.mylutece.url.lostLogin.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=lostLogin'),('mylutece.security.public_url.mylutece.url.doActionsAll','jsp/site/plugins/mylutece/Do*'),('mylutece-database_banned_domain_names','yopmail.com'),('mylutece.security.public_url.mylutece-database.url.login.page','jsp/site/Portal.jsp?page=mylutece&action=login'),('mylutece.security.public_url.mylutece-database.url.doLogin','jsp/site/plugins/mylutece/DoMyLuteceLogin.jsp'),('mylutece.security.public_url.mylutece-database.url.doLogout','jsp/site/plugins/mylutece/DoMyLuteceLogout.jsp'),('mylutece.security.public_url.mylutece-database.url.createAccount.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=createAccount'),('mylutece.security.public_url.mylutece-database.url.lostPassword.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=lostPassword'),('mylutece.security.public_url.mylutece-database.url.lostLogin.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=lostLogin'),('mylutece.security.public_url.mylutece-database.url.reinitPassword.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=reinitPassword'),('mylutece.security.public_url.mylutece-database.url.doActionsAll','jsp/site/plugins/mylutece/modules/database/Do*'),('core.cache.status.PageCachingFilter.enabled','0'),('core.cache.status.LuteceUserCacheService.enabled','1'),('core.cache.status.StaticFilesCachingFilter.enabled','1'),('core.cache.status.PageCacheService.enabled','1'),('core.cache.status.MailAttachmentCacheService.overflowToDisk','true'),('core.cache.status.PortletCacheService.enabled','0'),('core.cache.status.LuteceUserCacheService.maxElementsInMemory','1000'),('core.cache.status.MailAttachmentCacheService.enabled','1'),('core.cache.status.PortalMenuService.enabled','1'),('core.cache.status.StaticFilesCachingFilter.timeToLiveSeconds','604800'),('core.cache.status.MailAttachmentCacheService.diskPersistent','true'),('core.cache.status.BaseUserPreferencesCacheService.maxElementsInMemory','1000'),('core.cache.status.MyPortalWidgetContentService.enabled','1'),('core.cache.status.MailAttachmentCacheService.timeToLiveSeconds','7200'),('core.cache.status.MailAttachmentCacheService.maxElementsInMemory','10'),('core.cache.status.pathCacheService.enabled','1'),('core.cache.status.MyPortalWidgetService.enabled','1'),('core.cache.status.LinksIncludeCacheService.enabled','1'),('core.cache.status.SiteMapService.enabled','1'),('core.cache.status.BaseUserPreferencesCacheService.enabled','1'),('core.plugins.status.core_extensions.installed','true'),('core.plugins.status.lucene.installed','true'),('core.daemon.indexer.interval','300'),('core.daemon.indexer.onStartUp','true'),('core.daemon.mailSender.interval','86400'),('core.daemon.mailSender.onStartUp','true'),('core.daemon.anonymizationDaemon.interval','86400'),('core.daemon.anonymizationDaemon.onStartUp','false'),('core.daemon.accountLifeTimeDaemon.interval','86400'),('core.daemon.accountLifeTimeDaemon.onStartUp','true'),('core.daemon.threadLauncherDaemon.interval','86400'),('core.daemon.threadLauncherDaemon.onStartUp','true'),('core.daemon.crmDemandCleaner.interval','86400'),('core.daemon.crmDemandCleaner.onStartUp','true'),('core.daemon.automaticActionDaemon.interval','14400'),('core.daemon.automaticActionDaemon.onStartUp','true'),('core.daemon.databaseAnonymizationDaemon.interval','86400'),('core.daemon.databaseAnonymizationDaemon.onStartUp','true'),('core.daemon.databaseAccountLifeTimeDaemon.interval','86400'),('core.daemon.databaseAccountLifeTimeDaemon.onStartUp','true'),('core.startup.time','7 févr. 2019 16:50:24'),('core.cache.status.DatastoreCacheService.enabled','0'),('core.plugins.status.address.installed','true'),('core.plugins.status.address-autocomplete.installed','true'),('core.plugins.status.adminavatar.installed','true'),('core.plugins.status.asynchronous-upload.installed','true'),('core.plugins.status.asynchronous-upload.pool','portal'),('core.plugins.status.avatar.installed','true'),('core.plugins.status.childpages.installed','true'),('core.plugins.status.contact.installed','true'),('core.plugins.status.contact.pool','portal'),('core.plugins.status.crm.installed','true'),('core.plugins.status.crm.pool','portal'),('core.plugins.status.favorites.installed','true'),('core.plugins.status.favorites.pool','portal'),('core.plugins.status.forms.installed','true'),('core.plugins.status.forms.pool','portal'),('core.plugins.status.forms-documentproducer.installed','true'),('core.plugins.status.forms-documentproducer.pool','portal'),('core.plugins.status.html.installed','true'),('core.plugins.status.htmlpage.installed','true'),('core.plugins.status.htmlpage.pool','portal'),('core.plugins.status.limitconnectedusers.installed','true'),('core.plugins.status.mydashboard.installed','true'),('core.plugins.status.mydashboard.pool','portal'),('core.plugins.status.mydashboard-avatar.installed','true'),('core.plugins.status.mylutece.installed','true'),('core.plugins.status.mylutece.pool','portal'),('core.plugins.status.mylutece-database.installed','true'),('core.plugins.status.mylutece-database.pool','portal'),('core.plugins.status.mylutecetest.installed','true'),('core.plugins.status.profiles.installed','true'),('core.plugins.status.profiles.pool','portal'),('core.plugins.status.regularexpression.installed','true'),('core.plugins.status.regularexpression.pool','portal'),('core.plugins.status.rest.installed','true'),('core.plugins.status.subscribe.installed','true'),('core.plugins.status.subscribe.pool','portal'),('core.plugins.status.upload.installed','true'),('core.plugins.status.workflow.installed','true'),('core.plugins.status.workflow.pool','portal'),('core.plugins.status.workflow-forms.installed','true'),('core.plugins.status.workflow-forms.pool','portal'),('core.plugins.status.workflow-formsautomaticassignment.installed','true'),('core.plugins.status.workflow-formsautomaticassignment.pool','portal'),('core.plugins.status.workflow-formspdf.installed','true'),('core.plugins.status.workflow-formspdf.pool','portal'),('core.plugins.status.workflow-rest.installed','true'),('core.cache.status.XMLTransformerCacheService(XSLT).enabled','1');
+INSERT INTO `core_datastore` VALUES ('core.advanced_parameters.password_duration','120'),('core.advanced_parameters.default_user_level','0'),('core.advanced_parameters.default_user_notification','1'),('core.advanced_parameters.default_user_language','fr'),('core.advanced_parameters.default_user_status','0'),('core.advanced_parameters.email_pattern','^[\\w_.\\-!\\#\\$\\%\\&\'\\*\\+\\/\\=\\?\\^\\`\\}\\{\\|\\~]+@[\\w_.\\-]+\\.[\\w]+$'),('core.advanced_parameters.email_pattern_verify_by',''),('core.advanced_parameters.force_change_password_reinit','false'),('core.advanced_parameters.password_minimum_length','8'),('core.advanced_parameters.password_format_upper_lower_case','false'),('core.advanced_parameters.password_format_numero','false'),('core.advanced_parameters.password_format_special_characters','false'),('core.advanced_parameters.password_history_size',''),('core.advanced_parameters.maximum_number_password_change',''),('core.advanced_parameters.tsw_size_password_change',''),('core.advanced_parameters.use_advanced_security_parameters',''),('core.advanced_parameters.account_life_time','12'),('core.advanced_parameters.time_before_alert_account','30'),('core.advanced_parameters.nb_alert_account','2'),('core.advanced_parameters.time_between_alerts_account','10'),('core.advanced_parameters.access_failures_max','3'),('core.advanced_parameters.access_failures_interval','10'),('core.advanced_parameters.expired_alert_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.expired_alert_mail_subject','Votre compte a expiré'),('core.advanced_parameters.first_alert_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.first_alert_mail_subject','Votre compte va bientôt expirer'),('core.advanced_parameters.other_alert_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.other_alert_mail_subject','Votre compte va bientôt expirer'),('core.advanced_parameters.account_reactivated_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.account_reactivated_mail_subject','Votre compte a bien été réactivé'),('core.advanced_parameters.access_failures_captcha','1'),('core.advanced_parameters.notify_user_password_expired',''),('core.advanced_parameters.password_expired_mail_sender','lutece@nowhere.com'),('core.advanced_parameters.password_expired_mail_subject','Votre mot de passe a expiré'),('core.advanced_parameters.reset_token_validity','60'),('core.advanced_parameters.lock_reset_token_to_session','false'),('core.backOffice.defaultEditor','tinymce'),('core.frontOffice.defaultEditor','markitupbbcode'),('core_banned_domain_names','yopmail.com'),('portal.site.site_property.name','LUTECE'),('portal.site.site_property.meta.author','<author>'),('portal.site.site_property.meta.copyright','<copyright>'),('portal.site.site_property.meta.description','<description>'),('portal.site.site_property.meta.keywords','<keywords>'),('portal.site.site_property.email','<webmaster email>'),('portal.site.site_property.noreply_email','no-reply@mydomain.com'),('portal.site.site_property.home_url','jsp/site/Portal.jsp'),('portal.site.site_property.admin_home_url','jsp/admin/AdminMenu.jsp'),('portal.site.site_property.popup_credits.textblock','&lt;credits text&gt;'),('portal.site.site_property.popup_legal_info.copyright.textblock','&lt;copyright text&gt;'),('portal.site.site_property.popup_legal_info.privacy.textblock','&lt;privacy text&gt;'),('portal.site.site_property.logo_url','images/logo-header-icon.png'),('portal.site.site_property.menu.position','top'),('portal.site.site_property.locale.default','fr'),('portal.site.site_property.avatar_default','images/admin/skin/unknown.png'),('portal.site.site_property.back_images','\'images/admin/skin/bg_login1.jpg\' , \'images/admin/skin/bg_login2.jpg\' , \'images/admin/skin/bg_login3.jpg\' , \'images/admin/skin/bg_login4.jpg\''),('adminavatar.site_property.avatarserver.Url',''),('limitconnectedusers.site_property.limit_message.textblock','<div class=\'alert alert-danger\'>Le nombre maximal d\'utilisateur connecté simultanément a été atteint</div>'),('limitconnectedusers.site_property.limit_notification_mailing_list.textblock',''),('limitconnectedusers.site_property.limit_notification_message.textblock','Le nombre maximal d\'utilisateur connecté simultanément a été atteint'),('limitconnectedusers.site_property.limit_notification_sender_name','LUTECE'),('limitconnectedusers.site_property.limit_notification_subject.textblock','Le nombre maximal d\'utilisateur connecté simultanément a été atteint'),('mylutece.security.public_url.mylutece.url.login.page','jsp/site/Portal.jsp?page=mylutece&action=login'),('mylutece.security.public_url.mylutece.url.doLogin','jsp/site/plugins/mylutece/DoMyLuteceLogin.jsp'),('mylutece.security.public_url.mylutece.url.doLogout','jsp/site/plugins/mylutece/DoMyLuteceLogout.jsp'),('mylutece.security.public_url.mylutece.url.createAccount.page','jsp/site/Portal.jsp?page=mylutece&action=createAccount'),('mylutece.security.public_url.mylutece.url.modifyAccount.page','jsp/site/Portal.jsp?page=mylutece&action=modifyAccount'),('mylutece.security.public_url.mylutece.url.lostPassword.page','jsp/site/Portal.jsp?page=mylutece&action=lostPassword'),('mylutece.security.public_url.mylutece.url.lostLogin.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=lostLogin'),('mylutece.security.public_url.mylutece.url.doActionsAll','jsp/site/plugins/mylutece/Do*'),('mylutece-database_banned_domain_names','yopmail.com'),('mylutece.security.public_url.mylutece-database.url.login.page','jsp/site/Portal.jsp?page=mylutece&action=login'),('mylutece.security.public_url.mylutece-database.url.doLogin','jsp/site/plugins/mylutece/DoMyLuteceLogin.jsp'),('mylutece.security.public_url.mylutece-database.url.doLogout','jsp/site/plugins/mylutece/DoMyLuteceLogout.jsp'),('mylutece.security.public_url.mylutece-database.url.createAccount.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=createAccount'),('mylutece.security.public_url.mylutece-database.url.lostPassword.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=lostPassword'),('mylutece.security.public_url.mylutece-database.url.lostLogin.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=lostLogin'),('mylutece.security.public_url.mylutece-database.url.reinitPassword.page','jsp/site/Portal.jsp?page=mylutecedatabase&action=reinitPassword'),('mylutece.security.public_url.mylutece-database.url.doActionsAll','jsp/site/plugins/mylutece/modules/database/Do*'),('core.cache.status.PageCachingFilter.enabled','0'),('core.cache.status.LuteceUserCacheService.enabled','1'),('core.cache.status.StaticFilesCachingFilter.enabled','1'),('core.cache.status.PageCacheService.enabled','1'),('core.cache.status.MailAttachmentCacheService.overflowToDisk','true'),('core.cache.status.PortletCacheService.enabled','0'),('core.cache.status.LuteceUserCacheService.maxElementsInMemory','1000'),('core.cache.status.MailAttachmentCacheService.enabled','1'),('core.cache.status.PortalMenuService.enabled','1'),('core.cache.status.StaticFilesCachingFilter.timeToLiveSeconds','604800'),('core.cache.status.MailAttachmentCacheService.diskPersistent','true'),('core.cache.status.BaseUserPreferencesCacheService.maxElementsInMemory','1000'),('core.cache.status.MyPortalWidgetContentService.enabled','1'),('core.cache.status.MailAttachmentCacheService.timeToLiveSeconds','7200'),('core.cache.status.MailAttachmentCacheService.maxElementsInMemory','10'),('core.cache.status.pathCacheService.enabled','1'),('core.cache.status.MyPortalWidgetService.enabled','1'),('core.cache.status.LinksIncludeCacheService.enabled','1'),('core.cache.status.SiteMapService.enabled','1'),('core.cache.status.BaseUserPreferencesCacheService.enabled','1'),('core.plugins.status.core_extensions.installed','true'),('core.plugins.status.lucene.installed','true'),('core.daemon.indexer.interval','300'),('core.daemon.indexer.onStartUp','true'),('core.daemon.mailSender.interval','86400'),('core.daemon.mailSender.onStartUp','true'),('core.daemon.anonymizationDaemon.interval','86400'),('core.daemon.anonymizationDaemon.onStartUp','false'),('core.daemon.accountLifeTimeDaemon.interval','86400'),('core.daemon.accountLifeTimeDaemon.onStartUp','true'),('core.daemon.threadLauncherDaemon.interval','86400'),('core.daemon.threadLauncherDaemon.onStartUp','true'),('core.daemon.crmDemandCleaner.interval','86400'),('core.daemon.crmDemandCleaner.onStartUp','true'),('core.daemon.automaticActionDaemon.interval','14400'),('core.daemon.automaticActionDaemon.onStartUp','true'),('core.daemon.databaseAnonymizationDaemon.interval','86400'),('core.daemon.databaseAnonymizationDaemon.onStartUp','true'),('core.daemon.databaseAccountLifeTimeDaemon.interval','86400'),('core.daemon.databaseAccountLifeTimeDaemon.onStartUp','true'),('core.startup.time','7 févr. 2019 18:37:04'),('core.cache.status.DatastoreCacheService.enabled','0'),('core.plugins.status.address.installed','true'),('core.plugins.status.address-autocomplete.installed','true'),('core.plugins.status.adminavatar.installed','true'),('core.plugins.status.asynchronous-upload.installed','true'),('core.plugins.status.asynchronous-upload.pool','portal'),('core.plugins.status.avatar.installed','true'),('core.plugins.status.childpages.installed','true'),('core.plugins.status.contact.installed','true'),('core.plugins.status.contact.pool','portal'),('core.plugins.status.crm.installed','true'),('core.plugins.status.crm.pool','portal'),('core.plugins.status.favorites.installed','true'),('core.plugins.status.favorites.pool','portal'),('core.plugins.status.forms.installed','true'),('core.plugins.status.forms.pool','portal'),('core.plugins.status.forms-documentproducer.installed','true'),('core.plugins.status.forms-documentproducer.pool','portal'),('core.plugins.status.html.installed','true'),('core.plugins.status.htmlpage.installed','true'),('core.plugins.status.htmlpage.pool','portal'),('core.plugins.status.limitconnectedusers.installed','true'),('core.plugins.status.mydashboard.installed','true'),('core.plugins.status.mydashboard.pool','portal'),('core.plugins.status.mydashboard-avatar.installed','true'),('core.plugins.status.mylutece.installed','true'),('core.plugins.status.mylutece.pool','portal'),('core.plugins.status.mylutece-database.installed','true'),('core.plugins.status.mylutece-database.pool','portal'),('core.plugins.status.mylutecetest.installed','true'),('core.plugins.status.profiles.installed','true'),('core.plugins.status.profiles.pool','portal'),('core.plugins.status.regularexpression.installed','true'),('core.plugins.status.regularexpression.pool','portal'),('core.plugins.status.rest.installed','true'),('core.plugins.status.subscribe.installed','true'),('core.plugins.status.subscribe.pool','portal'),('core.plugins.status.upload.installed','true'),('core.plugins.status.workflow.installed','true'),('core.plugins.status.workflow.pool','portal'),('core.plugins.status.workflow-forms.installed','true'),('core.plugins.status.workflow-forms.pool','portal'),('core.plugins.status.workflow-formsautomaticassignment.installed','true'),('core.plugins.status.workflow-formsautomaticassignment.pool','portal'),('core.plugins.status.workflow-formspdf.installed','true'),('core.plugins.status.workflow-formspdf.pool','portal'),('core.plugins.status.workflow-rest.installed','true'),('core.cache.status.XMLTransformerCacheService(XSLT).enabled','1'),('core.cache.status.EntryTypeServiceManagerCache.enabled','0'),('core.cache.status.asynchronousupload.asynchronousUploadCacheService.enabled','0');
 /*!40000 ALTER TABLE `core_datastore` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -940,7 +940,7 @@ CREATE TABLE `core_portlet` (
 
 LOCK TABLES `core_portlet` WRITE;
 /*!40000 ALTER TABLE `core_portlet` DISABLE KEYS */;
-INSERT INTO `core_portlet` VALUES (85,'CHILDPAGES_PORTLET',5,'Pages filles','2007-11-24 16:15:10',0,1,5,300,0,'2007-11-24 16:14:58',1,NULL,15),(87,'CHILDPAGES_PORTLET',3,'Pages filles','2007-11-24 16:21:01',0,1,5,300,0,'2007-11-24 16:19:50',1,NULL,15),(88,'CHILDPAGES_PORTLET',10,'Pages filles','2007-11-24 16:20:37',0,1,5,301,0,'2007-11-24 16:20:37',1,NULL,15),(89,'CHILDPAGES_PORTLET',9,'Pages filles','2007-11-24 16:23:06',0,1,5,301,0,'2007-11-24 16:21:47',1,NULL,15),(83,'CHILDPAGES_PORTLET',1,'Pages filles','2007-11-24 15:11:33',0,1,5,300,0,'2007-11-24 15:11:33',1,NULL,15),(1,'HTML_PORTLET',1,'Qu\'est-ce que Lutece ?','2014-06-08 15:53:14',0,2,1,101,0,'2011-03-14 12:13:39',1,'none',273),(2,'HTML_PORTLET',1,'Software overview','2014-06-08 15:58:00',0,1,2,100,0,'2012-09-18 06:35:45',0,'none',273),(3,'HTML_PORTLET',1,'Back Office quick access','2014-06-08 15:49:37',0,1,3,100,0,'2009-05-15 02:38:08',0,'none',273),(4,'HTML_PORTLET',2,'Page 1','2014-06-08 16:28:50',0,1,1,100,0,'2014-06-08 16:27:59',0,'none',273);
+INSERT INTO `core_portlet` VALUES (85,'CHILDPAGES_PORTLET',5,'Pages filles','2007-11-24 16:15:10',0,1,5,300,0,'2007-11-24 16:14:58',1,NULL,15),(87,'CHILDPAGES_PORTLET',3,'Pages filles','2007-11-24 16:21:01',0,1,5,300,0,'2007-11-24 16:19:50',1,NULL,15),(88,'CHILDPAGES_PORTLET',10,'Pages filles','2007-11-24 16:20:37',0,1,5,301,0,'2007-11-24 16:20:37',1,NULL,15),(89,'CHILDPAGES_PORTLET',9,'Pages filles','2007-11-24 16:23:06',0,1,5,301,0,'2007-11-24 16:21:47',1,NULL,15),(83,'CHILDPAGES_PORTLET',1,'Pages filles','2007-11-24 15:11:33',0,1,5,300,0,'2007-11-24 15:11:33',1,NULL,15),(1,'HTML_PORTLET',1,'Qu\'est-ce que Lutece ?','2019-02-08 09:19:12',0,1,1,100,0,'2011-03-14 12:13:39',1,'none',273),(2,'HTML_PORTLET',1,'Software overview','2014-06-08 15:58:00',0,1,2,100,0,'2012-09-18 06:35:45',0,'none',273),(3,'HTML_PORTLET',1,'Back Office quick access','2014-06-08 15:49:37',0,1,3,100,0,'2009-05-15 02:38:08',0,'none',273),(4,'HTML_PORTLET',2,'Page 1','2014-06-08 16:28:50',0,1,1,100,0,'2014-06-08 16:27:59',0,'none',273),(90,'HTML_PORTLET',1,'Formulaires de test','2019-02-08 09:25:34',0,2,1,101,0,'2019-02-08 09:18:18',0,'none',4369);
 /*!40000 ALTER TABLE `core_portlet` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1604,6 +1604,7 @@ CREATE TABLE `forms_config_producer` (
 
 LOCK TABLES `forms_config_producer` WRITE;
 /*!40000 ALTER TABLE `forms_config_producer` DISABLE KEYS */;
+INSERT INTO `forms_config_producer` VALUES (1,'Export PDF',1,1,'PDF','','default',0);
 /*!40000 ALTER TABLE `forms_config_producer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1627,6 +1628,7 @@ CREATE TABLE `forms_config_question` (
 
 LOCK TABLES `forms_config_question` WRITE;
 /*!40000 ALTER TABLE `forms_config_question` DISABLE KEYS */;
+INSERT INTO `forms_config_question` VALUES (1,1),(1,2),(1,3),(1,4),(1,5),(1,6);
 /*!40000 ALTER TABLE `forms_config_question` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1699,7 +1701,7 @@ CREATE TABLE `forms_display` (
   `composite_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT '',
   `display_depth` int(11) DEFAULT '0',
   PRIMARY KEY (`id_display`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1708,6 +1710,7 @@ CREATE TABLE `forms_display` (
 
 LOCK TABLES `forms_display` WRITE;
 /*!40000 ALTER TABLE `forms_display` DISABLE KEYS */;
+INSERT INTO `forms_display` VALUES (1,1,1,1,0,1,'question',0),(2,1,1,2,0,2,'question',0),(3,1,1,3,0,3,'question',0),(4,1,1,4,0,4,'question',0),(5,1,2,5,0,1,'question',0),(6,1,2,6,0,2,'question',0);
 /*!40000 ALTER TABLE `forms_display` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1744,7 +1747,7 @@ CREATE TABLE `forms_form` (
 
 LOCK TABLES `forms_form` WRITE;
 /*!40000 ALTER TABLE `forms_form` DISABLE KEYS */;
-INSERT INTO `forms_form` VALUES (1,'Test Form','Test','2019-02-07 15:34:51','2019-02-07 15:34:51',NULL,NULL,0,NULL,-1,0,0,'forms.horizontalBreadcrumb',1,'');
+INSERT INTO `forms_form` VALUES (1,'Test Form','Test','2019-02-07 15:34:51','2019-02-08 09:06:14','2019-02-01','2022-12-31',0,NULL,1,0,0,'forms.horizontalBreadcrumb',1,'');
 /*!40000 ALTER TABLE `forms_form` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1817,7 +1820,7 @@ CREATE TABLE `forms_question` (
   `id_entry` int(11) DEFAULT '0',
   `id_step` int(11) DEFAULT '0',
   PRIMARY KEY (`id_question`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1826,6 +1829,7 @@ CREATE TABLE `forms_question` (
 
 LOCK TABLES `forms_question` WRITE;
 /*!40000 ALTER TABLE `forms_question` DISABLE KEYS */;
+INSERT INTO `forms_question` VALUES (1,'Civilité','',1,1),(2,'Nom','',2,1),(3,'Prénom','',3,1),(4,'Date','',4,1),(5,'Pensez que ...','',5,2),(6,'Commentaire','',6,2);
 /*!40000 ALTER TABLE `forms_question` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1841,7 +1845,7 @@ CREATE TABLE `forms_question_entry_response` (
   `id_question_response` int(11) NOT NULL DEFAULT '0',
   `id_entry_response` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_question_entry_response`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1850,6 +1854,7 @@ CREATE TABLE `forms_question_entry_response` (
 
 LOCK TABLES `forms_question_entry_response` WRITE;
 /*!40000 ALTER TABLE `forms_question_entry_response` DISABLE KEYS */;
+INSERT INTO `forms_question_entry_response` VALUES (1,1,1),(2,2,2),(3,3,3),(4,4,4),(5,5,5),(6,5,6),(7,6,7);
 /*!40000 ALTER TABLE `forms_question_entry_response` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1867,7 +1872,7 @@ CREATE TABLE `forms_question_response` (
   `id_step` int(11) NOT NULL DEFAULT '0',
   `iteration_number` int(11) DEFAULT '0',
   PRIMARY KEY (`id_question_response`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1876,6 +1881,7 @@ CREATE TABLE `forms_question_response` (
 
 LOCK TABLES `forms_question_response` WRITE;
 /*!40000 ALTER TABLE `forms_question_response` DISABLE KEYS */;
+INSERT INTO `forms_question_response` VALUES (1,1,1,1,0),(2,1,2,1,0),(3,1,3,1,0),(4,1,4,1,0),(5,1,5,2,0),(6,1,6,2,0);
 /*!40000 ALTER TABLE `forms_question_response` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1894,7 +1900,7 @@ CREATE TABLE `forms_response` (
   `update_date` timestamp NOT NULL DEFAULT '1979-12-31 23:00:00',
   `from_save` smallint(6) DEFAULT '0',
   PRIMARY KEY (`id_response`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1903,6 +1909,7 @@ CREATE TABLE `forms_response` (
 
 LOCK TABLES `forms_response` WRITE;
 /*!40000 ALTER TABLE `forms_response` DISABLE KEYS */;
+INSERT INTO `forms_response` VALUES (1,1,NULL,'2019-02-08 09:10:28','2019-02-08 09:10:28',0);
 /*!40000 ALTER TABLE `forms_response` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1919,7 +1926,7 @@ CREATE TABLE `forms_response_step` (
   `id_step` int(11) NOT NULL DEFAULT '0',
   `order_response` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1928,6 +1935,7 @@ CREATE TABLE `forms_response_step` (
 
 LOCK TABLES `forms_response_step` WRITE;
 /*!40000 ALTER TABLE `forms_response_step` DISABLE KEYS */;
+INSERT INTO `forms_response_step` VALUES (1,1,1,0),(2,1,2,1);
 /*!40000 ALTER TABLE `forms_response_step` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1972,7 +1980,7 @@ CREATE TABLE `forms_transition` (
   `next_step` int(11) NOT NULL,
   `priority` int(11) DEFAULT '0',
   PRIMARY KEY (`id_transition`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1981,7 +1989,185 @@ CREATE TABLE `forms_transition` (
 
 LOCK TABLES `forms_transition` WRITE;
 /*!40000 ALTER TABLE `forms_transition` DISABLE KEYS */;
+INSERT INTO `forms_transition` VALUES (1,1,2,1);
 /*!40000 ALTER TABLE `forms_transition` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `genatt_entry`
+--
+
+DROP TABLE IF EXISTS `genatt_entry`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `genatt_entry` (
+  `id_entry` int(11) NOT NULL DEFAULT '0',
+  `id_resource` int(11) NOT NULL DEFAULT '0',
+  `resource_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `id_type` int(11) NOT NULL DEFAULT '0',
+  `id_parent` int(11) DEFAULT NULL,
+  `title` mediumtext COLLATE utf8_unicode_ci,
+  `code` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `help_message` mediumtext COLLATE utf8_unicode_ci,
+  `comment` mediumtext COLLATE utf8_unicode_ci,
+  `mandatory` smallint(6) DEFAULT NULL,
+  `fields_in_line` smallint(6) DEFAULT NULL,
+  `pos` int(11) DEFAULT NULL,
+  `id_field_depend` int(11) DEFAULT NULL,
+  `confirm_field` smallint(6) DEFAULT NULL,
+  `confirm_field_title` mediumtext COLLATE utf8_unicode_ci,
+  `field_unique` smallint(6) DEFAULT NULL,
+  `map_provider` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `css_class` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pos_conditional` int(11) DEFAULT '0',
+  `error_message` mediumtext COLLATE utf8_unicode_ci,
+  `num_row` smallint(6) DEFAULT '0',
+  `num_column` smallint(6) DEFAULT '0',
+  `is_role_associated` smallint(6) DEFAULT '0',
+  `is_only_display_back` smallint(6) DEFAULT '0',
+  `is_editable_back` smallint(6) DEFAULT '0',
+  PRIMARY KEY (`id_entry`),
+  KEY `index_genatt_entry_resource` (`id_resource`),
+  KEY `index_genatt_entry_parent` (`id_parent`),
+  KEY `fk_genatt_entry_type` (`id_type`),
+  CONSTRAINT `fk_genatt_entry_type` FOREIGN KEY (`id_type`) REFERENCES `genatt_entry_type` (`id_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `genatt_entry`
+--
+
+LOCK TABLES `genatt_entry` WRITE;
+/*!40000 ALTER TABLE `genatt_entry` DISABLE KEYS */;
+INSERT INTO `genatt_entry` VALUES (1,1,'FORMS_FORM',101,NULL,'Civilité',NULL,'','',1,1,1,NULL,0,NULL,0,'','',0,NULL,0,0,0,0,0),(2,1,'FORMS_FORM',106,NULL,'Nom',NULL,'','',0,0,2,NULL,0,NULL,0,'','',0,'',0,0,0,0,0),(3,1,'FORMS_FORM',106,NULL,'Prénom',NULL,'','',0,0,3,NULL,0,NULL,0,'','',0,'',0,0,0,0,0),(4,1,'FORMS_FORM',104,NULL,'Date',NULL,'','',0,0,4,NULL,0,NULL,0,'','',0,NULL,0,0,0,0,0),(5,1,'FORMS_FORM',102,NULL,'Pensez que ...',NULL,'','',0,0,5,NULL,0,NULL,0,'','',0,'',0,0,0,0,0),(6,1,'FORMS_FORM',107,NULL,'Commentaire',NULL,'','',0,0,6,NULL,0,NULL,0,'','',0,NULL,0,0,0,0,0);
+/*!40000 ALTER TABLE `genatt_entry` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `genatt_entry_type`
+--
+
+DROP TABLE IF EXISTS `genatt_entry_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `genatt_entry_type` (
+  `id_type` int(11) NOT NULL DEFAULT '0',
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `is_group` smallint(6) DEFAULT NULL,
+  `is_comment` int(11) DEFAULT NULL,
+  `is_mylutece_user` smallint(6) DEFAULT NULL,
+  `class_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `icon_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `plugin` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id_type`),
+  KEY `index_genatt_entry_type_plugin` (`plugin`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `genatt_entry_type`
+--
+
+LOCK TABLES `genatt_entry_type` WRITE;
+/*!40000 ALTER TABLE `genatt_entry_type` DISABLE KEYS */;
+INSERT INTO `genatt_entry_type` VALUES (101,'Bouton radio',0,0,0,'forms.entryTypeRadioButton','dot-circle-o','forms'),(102,'Case à cocher',0,0,0,'forms.entryTypeCheckBox','check-square-o','forms'),(103,'Commentaire',0,1,0,'forms.entryTypeComment','comment-o','forms'),(104,'Date',0,0,0,'forms.entryTypeDate','calendar','forms'),(105,'Liste déroulante',0,0,0,'forms.entryTypeSelect','list-alt','forms'),(106,'Zone de texte court',0,0,0,'forms.entryTypeText','file-text-o','forms'),(107,'Zone de texte long',0,0,0,'forms.entryTypeTextArea','file-text','forms'),(108,'Fichier',0,0,0,'forms.entryTypeFile','file','forms'),(109,'Géolocalisation',0,0,0,'forms.entryTypeGeolocation','map-o','forms'),(110,'Image',0,0,0,'forms.entryTypeImage','image','forms'),(111,'Utilisateur MyLutece',0,0,1,'forms.entryTypeMyLuteceUser','user','forms'),(112,'Numérotation',0,0,0,'forms.entryTypeNumbering','phone','forms'),(113,'Attribut de l\'utilisateur MyLutece',0,0,0,'forms.entryTypeMyLuteceUserattribute','user','forms'),(114,'Tableau',0,0,0,'forms.entryTypeArray','table','forms'),(115,'Regroupement',1,0,0,'forms.entryTypeGroup','indent','forms'),(116,'Conditions d\'utilisation',0,0,0,'forms.entryTypeTermsOfService','legal','forms');
+/*!40000 ALTER TABLE `genatt_entry_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `genatt_field`
+--
+
+DROP TABLE IF EXISTS `genatt_field`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `genatt_field` (
+  `id_field` int(11) NOT NULL DEFAULT '0',
+  `id_entry` int(11) NOT NULL DEFAULT '0',
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `code` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `value` mediumtext COLLATE utf8_unicode_ci,
+  `height` int(11) DEFAULT NULL,
+  `width` int(11) DEFAULT NULL,
+  `default_value` smallint(6) DEFAULT NULL,
+  `max_size_enter` int(11) DEFAULT NULL,
+  `pos` int(11) DEFAULT NULL,
+  `value_type_date` date DEFAULT NULL,
+  `no_display_title` smallint(6) DEFAULT NULL,
+  `comment` mediumtext COLLATE utf8_unicode_ci,
+  `role_key` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image_type` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id_field`),
+  KEY `index_genatt_field_entry` (`id_entry`),
+  CONSTRAINT `fk_genatt_field_entry` FOREIGN KEY (`id_entry`) REFERENCES `genatt_entry` (`id_entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `genatt_field`
+--
+
+LOCK TABLES `genatt_field` WRITE;
+/*!40000 ALTER TABLE `genatt_field` DISABLE KEYS */;
+INSERT INTO `genatt_field` VALUES (1,1,'Monsieur',NULL,'1',0,0,1,0,1,NULL,0,'',NULL,NULL),(2,1,'Madame',NULL,'2',0,0,0,0,2,NULL,0,'',NULL,NULL),(3,2,NULL,NULL,'',0,0,0,-1,3,NULL,0,NULL,NULL,NULL),(4,3,NULL,NULL,'',0,0,0,-1,4,NULL,0,NULL,NULL,NULL),(5,4,NULL,NULL,NULL,0,0,0,0,5,NULL,0,NULL,NULL,NULL),(6,5,'aaa',NULL,'a',0,0,0,0,6,NULL,0,'',NULL,NULL),(7,5,'bbb',NULL,'b',0,0,0,0,7,NULL,0,'',NULL,NULL),(8,5,'ccc',NULL,'c',0,0,0,0,8,NULL,0,'',NULL,NULL),(9,6,NULL,NULL,'',8,300,0,-1,9,NULL,0,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `genatt_field` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `genatt_response`
+--
+
+DROP TABLE IF EXISTS `genatt_response`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `genatt_response` (
+  `id_response` int(11) NOT NULL DEFAULT '0',
+  `response_value` mediumtext COLLATE utf8_unicode_ci,
+  `id_entry` int(11) DEFAULT NULL,
+  `iteration_number` int(11) DEFAULT '-1',
+  `id_field` int(11) DEFAULT NULL,
+  `id_file` int(11) DEFAULT NULL,
+  `status` smallint(6) DEFAULT '1',
+  PRIMARY KEY (`id_response`),
+  KEY `index_genatt_response_entry` (`id_entry`),
+  CONSTRAINT `fk_genatt_response_entry` FOREIGN KEY (`id_entry`) REFERENCES `genatt_entry` (`id_entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `genatt_response`
+--
+
+LOCK TABLES `genatt_response` WRITE;
+/*!40000 ALTER TABLE `genatt_response` DISABLE KEYS */;
+INSERT INTO `genatt_response` VALUES (1,'1',1,0,1,NULL,1),(2,'gdfgd',2,0,NULL,NULL,1),(3,'dfgd',3,0,NULL,NULL,1),(4,'14/02/2019',4,0,NULL,NULL,1),(5,'b',5,0,7,NULL,1),(6,'c',5,0,8,NULL,1),(7,'gsjklh fjslk s',6,0,NULL,NULL,1);
+/*!40000 ALTER TABLE `genatt_response` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `genatt_verify_by`
+--
+
+DROP TABLE IF EXISTS `genatt_verify_by`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `genatt_verify_by` (
+  `id_field` int(11) NOT NULL DEFAULT '0',
+  `id_expression` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_field`,`id_expression`),
+  KEY `index_genatt_verify_by_field` (`id_field`),
+  CONSTRAINT `fk_genatt_verify_by_field` FOREIGN KEY (`id_field`) REFERENCES `genatt_field` (`id_field`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `genatt_verify_by`
+--
+
+LOCK TABLES `genatt_verify_by` WRITE;
+/*!40000 ALTER TABLE `genatt_verify_by` DISABLE KEYS */;
+/*!40000 ALTER TABLE `genatt_verify_by` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -2004,7 +2190,7 @@ CREATE TABLE `html_portlet` (
 
 LOCK TABLES `html_portlet` WRITE;
 /*!40000 ALTER TABLE `html_portlet` DISABLE KEYS */;
-INSERT INTO `html_portlet` VALUES (1,'<div class=\"jumbotron\">\n  <h1>Welcome to LUTECE</h1>\n  <h3>\n    <small>Lutece is a CMS / Portal and a Web Framework that let\n    you create large and complex sites and applications.</small>\n  </h3>\n</div>\n'),(2,'<ul>\n  <li>Lutece is FreeSoftware. Full OpenSource licensed under\n  BSD.</li>\n  <li>Full responsive design Back and Front</li>\n  <li>Compliant with Bootstrap 3.x themes</li>\n  <li>Very modular and flexible architecture based on plugins,\n  APIs, IoC</li>\n  <li>Over 300 plugins available for many needs : Content\n  Management, Collaborative, Workflows, ...</li>\n  <li>Runs on Java Platform and rely on powerful build tools such\n  as Apache Maven</li>\n  <li>Uses best of breed Java Open Source stacks : Lucene, Spring,\n  Ehcache, Freemarker, ...</li>\n</ul>\n'),(3,'<form class=\"form\" action=\"jsp/admin/AdminLogin.jsp\" method=\"post\"> <div class=\"well\"> \n <span class=\"help-block\">Go and log in as \"admin\" or \"webmaster\".<br>The secret password is \"adminadmin\".</span> \n <br> \n <span class=\"help-block\">The \"admin\" user has all rights and features, whereas the \"webmaster\" user can only work on the editorial content of the site.</span> \n <br> \n <button class=\"btn btn-primary btn-block btn-flat\" type=\"submit\">Display login form</button> \n </div> </form>'),(4,'<h2>Here is a child page sample.</h2>\n<p>&#160;</p>\n<p>This page is divided into 2 columns.</p>\n<p>In each column you can publish several and different portlets :\nHTML, documents, ...</p>\n<p>This page can also have childs.</p>\n<p>&#160;</p>\n<p>&#160;</p>\n');
+INSERT INTO `html_portlet` VALUES (1,'<div class=\"jumbotron\"> \n <h1>Welcome to LUTECE</h1> \n <h3><small>Lutece is a CMS / Portal and a Web Framework that let you create large and complex sites and applications.</small></h3> \n</div>'),(2,'<ul>\n  <li>Lutece is FreeSoftware. Full OpenSource licensed under\n  BSD.</li>\n  <li>Full responsive design Back and Front</li>\n  <li>Compliant with Bootstrap 3.x themes</li>\n  <li>Very modular and flexible architecture based on plugins,\n  APIs, IoC</li>\n  <li>Over 300 plugins available for many needs : Content\n  Management, Collaborative, Workflows, ...</li>\n  <li>Runs on Java Platform and rely on powerful build tools such\n  as Apache Maven</li>\n  <li>Uses best of breed Java Open Source stacks : Lucene, Spring,\n  Ehcache, Freemarker, ...</li>\n</ul>\n'),(3,'<form class=\"form\" action=\"jsp/admin/AdminLogin.jsp\" method=\"post\"> <div class=\"well\"> \n <span class=\"help-block\">Go and log in as \"admin\" or \"webmaster\".<br>The secret password is \"adminadmin\".</span> \n <br> \n <span class=\"help-block\">The \"admin\" user has all rights and features, whereas the \"webmaster\" user can only work on the editorial content of the site.</span> \n <br> \n <button class=\"btn btn-primary btn-block btn-flat\" type=\"submit\">Display login form</button> \n </div> </form>'),(4,'<h2>Here is a child page sample.</h2>\n<p>&#160;</p>\n<p>This page is divided into 2 columns.</p>\n<p>In each column you can publish several and different portlets :\nHTML, documents, ...</p>\n<p>This page can also have childs.</p>\n<p>&#160;</p>\n<p>&#160;</p>\n'),(90,'<p>&gt; <a href=\"jsp/site/Portal.jsp?page=forms\">Liste des formulaires de test.</a></p> \n<p>Pour la définition du formulaire, se connecter en BackOffice (interface d\'administration), rubrique \"Application / formulaires à étape\" avec le compte admin / adminadmin01 .</p>');
 /*!40000 ALTER TABLE `html_portlet` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2610,6 +2796,7 @@ CREATE TABLE `profile_view` (
 
 LOCK TABLES `profile_view` WRITE;
 /*!40000 ALTER TABLE `profile_view` DISABLE KEYS */;
+INSERT INTO `profile_view` VALUES ('VUE_TEST','test');
 /*!40000 ALTER TABLE `profile_view` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3090,6 +3277,7 @@ CREATE TABLE `workflow_resource_workflow` (
 
 LOCK TABLES `workflow_resource_workflow` WRITE;
 /*!40000 ALTER TABLE `workflow_resource_workflow` DISABLE KEYS */;
+INSERT INTO `workflow_resource_workflow` VALUES (1,'FORMS_FORM_RESPONSE',1,1,1,0);
 /*!40000 ALTER TABLE `workflow_resource_workflow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3378,4 +3566,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-07 17:38:05
+-- Dump completed on 2019-02-08 11:05:03
