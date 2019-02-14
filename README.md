@@ -30,23 +30,23 @@ The plugin-workflow is also enabled in this image and provide features  like :
 
 ## build the image
 
-`docker build -t site-demo-forms .`
+`docker build -t site-forms-demo .`
 
 All Lutece images are available at https://hub.docker.com/u/lutece/
 
 ## Launch the server
 
 
-`docker run -p 80:8080 site-demo-forms`
+`docker run -p 80:8080 site-forms-demo`
 
 ## Connect to the server to see the service
 
-'http://localhost/site-demo-forms'
+'http://localhost/site-forms-demo'
 
 
 ## Back office management
 
-'http://localhost/site-demo-forms/jsp/admin/AdminMenu.jsp'
+'http://localhost/site-forms-demo/jsp/admin/AdminMenu.jsp'
 
 Connect to the back office with login/pwd : admin/adminadmin01
 

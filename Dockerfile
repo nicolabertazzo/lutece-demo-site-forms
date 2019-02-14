@@ -3,6 +3,9 @@ FROM lutece/builder as builder
 # define the fully qualified artifact of the site
 ARG site=site-forms-demo-1.0.0-SNAPSHOT
 
+# (mvn local proxy...)
+# ADD settings.xml /root/.m2/
+
 # build the site and assemble the webapp
 WORKDIR /app
 ADD pom.xml /app/pom.xml
