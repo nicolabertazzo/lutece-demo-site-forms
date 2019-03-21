@@ -8,7 +8,7 @@ pipeline {
     }
     stage('camp realize') {
       steps {
-        sh 'echo "camp realize"'
+        sh 'camp realize -d .'
       }
     }
   }
