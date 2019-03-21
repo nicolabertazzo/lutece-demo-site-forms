@@ -11,5 +11,10 @@ pipeline {
         sh 'camp realize -d .'
       }
     }
+    stage('camp execute') {
+      steps {
+        sh 'camp execute -c config.ini'
+      }
+    }
   }
 }
