@@ -18,8 +18,7 @@ pipeline {
               }
             }
           }
-
-          changeLogSets()
+          changeLogSets
         }
 
       }
