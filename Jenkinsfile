@@ -6,5 +6,10 @@ pipeline {
         sh 'echo "CIAO"'
       }
     }
+    stage('camp realize') {
+      steps {
+        sh 'echo "camp realize"'
+      }
+    }
   }
 }
