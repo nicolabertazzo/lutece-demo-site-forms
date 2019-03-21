@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('camp generate') {
       steps {
-        sh 'echo "CIAO"'
+        sh 'docker run hello-world'
       }
     }
     stage('camp realize') {
