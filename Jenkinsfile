@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('camp generate') {
       steps {
-        sh 'docker run -v $(pwd):/camp/workspace fchauvel/camp:dev camp generate -d workspace/camp --all'
+        sh 'docker run -v $(pwd):/camp/workspace fchauvel/camp:dev camp generate -d workspace --all'
       }
     }
     stage('camp realize') {
