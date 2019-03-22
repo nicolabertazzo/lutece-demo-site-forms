@@ -28,9 +28,13 @@ pipeline {
         sh 'camp realize -d .'
       }
     }
-    stage('camp execute') {
+    stage('execute tests') {
       steps {
-        sh 'camp execute -c config.ini'
+        withMaven(maven: 'maven3') {
+          sh '''cd lutece-form-test
+mvn clean test -DcampOutPath="${WORKSPACE}/camp/out"'''
+        }
+
       }
     }
   }
