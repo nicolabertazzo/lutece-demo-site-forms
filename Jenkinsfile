@@ -34,9 +34,12 @@ pipeline {
           sh '''cd lutece-form-test
 mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
         }
-
-        junit 'lutece-form-test/target/surefire-reports'
       }
+    }
+  }
+  post {
+    always {
+      junit 'lutece-form-test/target/surefire-reports/*.xml'
     }
   }
 }
