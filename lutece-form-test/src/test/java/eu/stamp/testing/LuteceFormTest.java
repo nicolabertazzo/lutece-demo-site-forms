@@ -40,7 +40,7 @@ public class LuteceFormTest {
 	}
 
 	public LuteceFormTest(File configFolder) {
-		environment = new DockerComposeContainer(new File(configFolder, DOCKER_COMPOSE_YML));
+		environment = new DockerComposeContainer(new File(configFolder, DOCKER_COMPOSE_YML)).withLocalCompose(true);
 		environment.start();
 	}
 
