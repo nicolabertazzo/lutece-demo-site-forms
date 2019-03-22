@@ -35,6 +35,7 @@ pipeline {
 mvn clean test -DcampOutPath="${WORKSPACE}/camp/out"'''
         }
 
+        junit 'lutece-form-test/target/surefire-reports'
       }
     }
   }
