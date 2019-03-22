@@ -21,7 +21,7 @@ public class LuteceFormTest {
 
 	private static final String CAMP_OUT_PATH_SYSTEM_PROPERTY = "campOutPath";
 	private static final String DOCKER_COMPOSE_YML = "docker-compose.yml";
-	private static final String LUTECE_SITE_FORMS_URL = "http://localhost:8080/site-forms-demo/";
+	private static final String LUTECE_SITE_FORMS_URL = "http://localhost:8081/site-forms-demo/";
 
 	private DockerComposeContainer environment;
 
