@@ -32,7 +32,7 @@ pipeline {
       steps {
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
           sh '''cd lutece-form-test
-mvn clean test -DcampOutPath="../camp/out"'''
+mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
         }
 
         junit 'lutece-form-test/target/surefire-reports'
