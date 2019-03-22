@@ -31,7 +31,8 @@ pipeline {
     stage('execute tests') {
       steps {
         withMaven(maven: 'maven3') {
-          sh 'mvn clean test -DcampOutPath=" ${WORKSPACE}/camp/out"'
+          sh '''cd lutece-form-test
+mvn clean test -DcampOutPath="${WORKSPACE}/camp/out"'''
         }
 
       }
