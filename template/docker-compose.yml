@@ -2,13 +2,6 @@ version: '3'
 
 services:
 
-  tests:
-    build: ./tests
-    volumes:
-      - "./tests:/tests"
-    depends_on:
-      - lutece
-
   lutece:
     build: ./lutece
     ports:
