@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -39,7 +40,7 @@ public class LuteceFormTest {
 	}
 
 	public LuteceFormTest(File configFolder) {
-		environment = new DockerComposeContainer(new File(configFolder, DOCKER_COMPOSE_YML)).withLocalCompose(true);
+		environment = new DockerComposeContainer(new File(configFolder, DOCKER_COMPOSE_YML));
 		environment.start();
 	}
 
@@ -54,5 +55,10 @@ public class LuteceFormTest {
 			fail();
 		}
 
+	}
+
+	@After
+	public void stopDockerCompose() {
+		environment.stop();
 	}
 }
