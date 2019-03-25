@@ -31,3 +31,4 @@ mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
     }
   }
 }
+
