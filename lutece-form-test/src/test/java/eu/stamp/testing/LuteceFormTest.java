@@ -17,7 +17,6 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.testcontainers.containers.DockerComposeContainer;
-import org.testcontainers.containers.wait.strategy.Wait;
 
 @RunWith(Parameterized.class)
 public class LuteceFormTest {
@@ -41,7 +40,7 @@ public class LuteceFormTest {
 	}
 
 	public LuteceFormTest(File configFolder) {
-		environment = new DockerComposeContainer(new File(configFolder, DOCKER_COMPOSE_YML)).withLocalCompose(true);
+		environment = new DockerComposeContainer("identifier", new File(configFolder, DOCKER_COMPOSE_YML)).withLocalCompose(true);
 	}
 
 	@Test
