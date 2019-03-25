@@ -1,10 +1,14 @@
 pipeline {
+
+  parameters {
+      booleanParam(name: 'config_changed', defaultValue: false, )
+  }
+
   agent any
   stages {
-    stage('camp generate') {
-      steps {
-        sh 'camp generate -d . --all'
-        script {
+
+    stage('check changelog') {
+      script {
           def changeLogSets = currentBuild.changeSets
           for (int i = 0; i < changeLogSets.size(); i++) {
             def entries = changeLogSets[i].items
@@ -18,9 +22,12 @@ pipeline {
               }
             }
           }
-          changeLogSets
         }
+    }
 
+    stage('camp generate') {
+      steps {
+        sh 'camp generate -d . --all'
       }
     }
     stage('camp realize') {
