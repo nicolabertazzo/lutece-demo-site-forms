@@ -16,7 +16,6 @@ pipeline {
       }
     }
     stage('execute tests') {
-      when { changeset "camp.yml" }
       steps {
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
           sh '''cd lutece-form-test
