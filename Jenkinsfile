@@ -8,6 +8,7 @@ pipeline {
   stages {
 
     stage('check changelog') {
+      steps {
       script {
           def changeLogSets = currentBuild.changeSets
           for (int i = 0; i < changeLogSets.size(); i++) {
@@ -23,6 +24,7 @@ pipeline {
             }
           }
         }
+      }  
     }
 
     stage('camp generate') {
