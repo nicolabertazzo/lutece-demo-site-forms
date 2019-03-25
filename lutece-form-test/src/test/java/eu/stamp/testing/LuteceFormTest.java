@@ -36,7 +36,6 @@ public class LuteceFormTest {
 	@Parameters(name = "{0}")
 	public static Collection<File> data() {
 		String campOutPath = System.getProperty(CAMP_OUT_PATH_SYSTEM_PROPERTY);
-		System.out.println(campOutPath);
 		File[] directories = new File(campOutPath).listFiles(File::isDirectory);
 		return Arrays.asList(directories);
 	}
@@ -61,7 +60,6 @@ public class LuteceFormTest {
 	@Before
 	public void startDockerCompose() {
 		environment.start();
-		environment.waitingFor("lutece", Wait.forListeningPort());
 	}
 
 	@After
