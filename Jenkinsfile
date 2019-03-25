@@ -1,7 +1,7 @@
 pipeline {
 
   parameters {
-      booleanParam(name: 'config_changed', defaultValue: false, )
+      booleanParam(name: 'config_changed', defaultValue: false )
   }
 
   agent any
@@ -20,6 +20,10 @@ pipeline {
               for (int k = 0; k < files.size(); k++) {
                 def file = files[k]
                 echo "  ${file.editType.name} ${file.path}"
+                if (file.path == "camp.yml"){
+                  env.config_changed =true;
+                  echo "${env.config_changed}"
+                }
               }
             }
           }
