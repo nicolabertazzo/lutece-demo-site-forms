@@ -17,7 +17,6 @@ components:
   lutece:
     provides_services: [Lutece]
     requires_services: [MySQL]
-    #requires_features : [Tomcat]
     implementation:
       docker:
         file: lutece/Dockerfile
