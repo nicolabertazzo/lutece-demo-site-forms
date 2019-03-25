@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -42,8 +43,6 @@ public class LuteceFormTest {
 
 	public LuteceFormTest(File configFolder) {
 		environment = new DockerComposeContainer(new File(configFolder, DOCKER_COMPOSE_YML)).withLocalCompose(true);
-		environment.start();
-		environment.waitingFor("lutece_1", Wait.forListeningPort());
 	}
 
 	@Test
@@ -57,6 +56,12 @@ public class LuteceFormTest {
 			fail();
 		}
 
+	}
+	
+	@Before
+	public void startDockerCompose() {
+		environment.start();
+		environment.waitingFor("lutece", Wait.forListeningPort());
 	}
 
 	@After
