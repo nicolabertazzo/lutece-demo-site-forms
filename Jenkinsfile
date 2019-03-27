@@ -6,7 +6,9 @@ pipeline {
     stage('camp generate') {
       when { changeset "camp.yml" }
       steps {
-        sh 'git rm out'
+        if (fileExists('out')) {
+          sh 'git rm out'
+        } 
         sh 'camp generate -d . --all'
       }
     }
