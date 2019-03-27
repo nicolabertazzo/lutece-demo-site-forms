@@ -8,7 +8,7 @@ pipeline {
       steps {
         script{
           if (fileExists('out')) {
-            sh 'git rm out'
+            sh 'git rm -r out'
           } 
         }
         sh 'camp generate -d . --all'
