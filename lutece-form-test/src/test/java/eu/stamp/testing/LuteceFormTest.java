@@ -58,9 +58,10 @@ public class LuteceFormTest {
 	}
 	
 	@Before
-	public void startDockerCompose() {
+	public void startDockerCompose() throws InterruptedException {
 		environment.start();
 		environment.waitingFor("lutece", Wait.forLogMessage("*site-forms-demo has finished*", 1));
+		Thread.sleep(20000);
 	}
 
 	@After
