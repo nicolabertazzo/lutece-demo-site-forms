@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  lutece:
+    build: ./images/lutece_0
+    ports:
+      - "8081:8080"
+    depends_on:
+      - storage
+
+  storage:
+    build: ./images/mysql_0
+    expose:
+      - 3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=motdepasse
