@@ -10,7 +10,7 @@ digraph Config {
     label="container 2";
     style="filled";
     color="lightgrey";
-    mysql_0 [label="{mysql|version=55}"];
+    mysql_0 [label="{mysql|version=57}"];
   }
   lutece_0 -> mysql_0;
 }
