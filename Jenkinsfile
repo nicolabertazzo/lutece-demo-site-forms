@@ -25,8 +25,10 @@ pipeline {
           // REPOSITORY URL  
           sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@${GIT_URL}')
         }
-        currentBuild.result = 'SUCCESS'
-        return
+        script{
+          currentBuild.result = 'SUCCESS'
+          return
+        }
       }
     }
     stage('execute tests') {
