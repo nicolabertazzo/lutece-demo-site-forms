@@ -4,7 +4,7 @@ pipeline {
   stages {
 
     stage('camp generate') {
-      when { changeset "camp.yml" }
+      when { changeset "camp.yml|template/**" }
       steps {
         script{
           if (fileExists('out')) {
@@ -15,7 +15,7 @@ pipeline {
       }
     }
     stage('camp realize') {
-      when { changeset "camp.yml" }
+      when { changeset "camp.yml|template/**" }
       steps {
         sh 'camp realize -d .'
         sh 'git add out'
