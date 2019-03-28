@@ -8,6 +8,7 @@ pipeline {
   stage('check changelog') {
       steps {
       script {
+          echo "config_changed value =  ${env.config_changed}"
           def changeLogSets = currentBuild.changeSets
           for (int i = 0; i < changeLogSets.size(); i++) {
             def entries = changeLogSets[i].items
@@ -28,7 +29,7 @@ pipeline {
     }
 
     stage('camp generate') {
-      when { expression {env.config_changed }}
+      when { expression {env.config_changed == true}}
       steps {
         script{
           if (fileExists('out')) {
@@ -39,13 +40,13 @@ pipeline {
       }
     }
     stage('camp realize') {
-      when { expression {env.config_changed }}
+      when { expression {env.config_changed == true}}
       steps {
         sh 'camp realize -d .'
       }
     }
     stage ('pull request') {
-      when { expression {env.config_changed }}
+      when { expression {env.config_changed == true}}
       steps{
         sh 'git checkout -b amplifyconf-${GIT_BRANCH}-${BUILD_NUMBER}'
         sh 'git add out'
