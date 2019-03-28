@@ -18,7 +18,7 @@ pipeline {
               for (int k = 0; k < files.size(); k++) {
                 def file = files[k]
                 if (file.path == "camp.yml" || file.path.startsWith("template")){
-                  env.config_changed =true;
+                  params.config_changed =true;
                 }
               }
             }
@@ -63,7 +63,8 @@ pipeline {
 
     stage('execute tests') {
       steps {
-        when { expression {params.config_changed == false }}
+        //when { expression {params.config_changed == false }}
+        echo "Config Changed value = ${params.config_changed}"
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
           sh '''cd lutece-form-test
           mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
