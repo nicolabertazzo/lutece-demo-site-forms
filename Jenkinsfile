@@ -4,7 +4,7 @@ pipeline {
   stages {
 
     stage('camp generate') {
-      when { changeset "camp.yml|template/**" }
+      when { changeset "camp.yml" }
       steps {
         script{
           if (fileExists('out')) {
@@ -15,13 +15,13 @@ pipeline {
       }
     }
     stage('camp realize') {
-      when { changeset "camp.yml|template/**" }
+      when { changeset "camp.yml" }
       steps {
         sh 'camp realize -d .'
       }
     }
     stage ('pull request') {
-      when { changeset "camp.yml|template/**"}
+      when { changeset "camp.yml"}
       steps{
         sh 'git checkout -b amplifyconf-${GIT_BRANCH}-${BUILD_NUMBER}'
         sh 'git add out'
