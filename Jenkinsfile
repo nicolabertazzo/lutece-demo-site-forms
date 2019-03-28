@@ -69,7 +69,6 @@ pipeline {
         }
       }
     }
-  }
   post {
     always {
       junit 'lutece-form-test/target/surefire-reports/*.xml'
