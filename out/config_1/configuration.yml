@@ -6,6 +6,6 @@ instances:
     - mysql_0
   mysql_0:
     configuration:
-      version: 56
+      version: 55
     definition: mysql
     service_providers: []
