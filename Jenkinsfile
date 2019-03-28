@@ -34,8 +34,10 @@ pipeline {
           sh 'hub pull-request -m "Amplify pull request from build ${BUILD_NUMBER} on ${GIT_BRANCH}"'
           }
         }
-        currentBuild.result = 'ABORTED'
-        error("stop pipeline")
+        script{
+          currentBuild.result = 'ABORTED'
+          error("stop pipeline")
+        }
       }
     }
 
