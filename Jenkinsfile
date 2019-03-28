@@ -4,6 +4,7 @@ pipeline {
       booleanParam(name: 'config_changed', defaultValue: false )
   }
   agent any
+  stages {
   stage('check changelog') {
       steps {
       script {
@@ -69,6 +70,7 @@ pipeline {
         }
       }
     }
+  }
   post {
     always {
       junit 'lutece-form-test/target/surefire-reports/*.xml'
