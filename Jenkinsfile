@@ -65,7 +65,7 @@ pipeline {
 
     stage('execute tests') {
       steps {
-        when { expression {return !(false)}}
+        when { expression {!(false)}}
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
           sh '''cd lutece-form-test
           mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
