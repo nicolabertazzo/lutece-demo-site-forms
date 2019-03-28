@@ -1,10 +1,33 @@
 pipeline {
 
+  parameters {
+      booleanParam(name: 'config_changed', defaultValue: false )
+  }
   agent any
-  stages {
+  stage('check changelog') {
+      steps {
+      script {
+          def changeLogSets = currentBuild.changeSets
+          for (int i = 0; i < changeLogSets.size(); i++) {
+            def entries = changeLogSets[i].items
+            for (int j = 0; j < entries.length; j++) {
+              def entry = entries[j]
+              def files = new ArrayList(entry.affectedFiles)
+              for (int k = 0; k < files.size(); k++) {
+                def file = files[k]
+                echo "  ${file.editType.name} ${file.path}"
+                if (file.path == "camp.yml" || file.path.startsWith("template")){
+                  env.config_changed =true;
+                }
+              }
+            }
+          }
+        }
+      }  
+    }
 
     stage('camp generate') {
-      when { changeset "camp.yml" }
+      when { env.config_changed }
       steps {
         script{
           if (fileExists('out')) {
@@ -15,13 +38,13 @@ pipeline {
       }
     }
     stage('camp realize') {
-      when { changeset "camp.yml" }
+      when { env.config_changed }
       steps {
         sh 'camp realize -d .'
       }
     }
     stage ('pull request') {
-      when { changeset "camp.yml"}
+      when { env.config_changed}
       steps{
         sh 'git checkout -b amplifyconf-${GIT_BRANCH}-${BUILD_NUMBER}'
         sh 'git add out'
@@ -34,15 +57,12 @@ pipeline {
           // sh 'hub pull-request -m "Amplify pull request from build ${BUILD_NUMBER} on ${GIT_BRANCH}"'
           // }
         }
-        script{
-          currentBuild.result = 'SUCCESS'
-          return
-        }
       }
     }
 
     stage('execute tests') {
       steps {
+        when {!env.config_changed}
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
           sh '''cd lutece-form-test
           mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
