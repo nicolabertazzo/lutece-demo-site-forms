@@ -65,7 +65,6 @@ pipeline {
 
     stage('execute tests') {
       steps {
-        when { expression {env.config_changed == 'false'}}
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
           sh '''cd lutece-form-test
           mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
