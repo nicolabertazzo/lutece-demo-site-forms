@@ -11,6 +11,7 @@ pipeline {
     stage('camp realize') {
       steps {
         sh 'camp realize -d .'
+        zip('configuration.zip', true, out)
       }
     }
     stage('execute tests') {
