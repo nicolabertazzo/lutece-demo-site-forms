@@ -8,6 +8,7 @@ pipeline {
   stage('check changelog') {
       steps {
       script {
+          env.config_changed = false;
           echo "config_changed value =  ${env.config_changed}"
           def changeLogSets = currentBuild.changeSets
           for (int i = 0; i < changeLogSets.size(); i++) {
