@@ -8,7 +8,7 @@ pipeline {
   stage('check changelog') {
       steps {
       script {
-          echo "config_changed value =  ${env.config_changed}"
+          echo "config_changed value =  ${params.config_changed}"
           def changeLogSets = currentBuild.changeSets
           for (int i = 0; i < changeLogSets.size(); i++) {
             def entries = changeLogSets[i].items
@@ -18,11 +18,12 @@ pipeline {
               for (int k = 0; k < files.size(); k++) {
                 def file = files[k]
                 if (file.path == "camp.yml" || file.path.startsWith("template")){
-                  params.config_changed =true;
+                  params.config_changed = true;
                 }
               }
             }
           }
+          echo "config_changed value =  ${params.config_changed}"
         }
       }  
     }
