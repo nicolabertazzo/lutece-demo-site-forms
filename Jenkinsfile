@@ -35,8 +35,8 @@ pipeline {
           // }
         }
         script{
-          currentBuild.result = 'ABORTED'
-          error("stop pipeline")
+          currentBuild.result = 'SUCCESS'
+          return
         }
       }
     }
