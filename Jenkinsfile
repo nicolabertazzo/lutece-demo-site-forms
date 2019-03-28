@@ -8,7 +8,7 @@ pipeline {
   stage('check changelog') {
       steps {
       script {
-          echo "config_changed value =  ${params.config_changed}"
+          echo "config_changed value =  ${env.config_changed}"
           def changeLogSets = currentBuild.changeSets
           for (int i = 0; i < changeLogSets.size(); i++) {
             def entries = changeLogSets[i].items
@@ -18,18 +18,18 @@ pipeline {
               for (int k = 0; k < files.size(); k++) {
                 def file = files[k]
                 if (file.path == "camp.yml" || file.path.startsWith("template")){
-                  params.config_changed = true;
+                  env.config_changed = true;
                 }
               }
             }
           }
-          echo "config_changed value =  ${params.config_changed}"
+          echo "config_changed value =  ${env.config_changed}"
         }
       }  
     }
 
     stage('camp generate') {
-      when { expression {return params.config_changed}}
+      when { expression {return env.config_changed == true}}
       steps {
         script{
           if (fileExists('out')) {
@@ -40,13 +40,13 @@ pipeline {
       }
     }
     stage('camp realize') {
-      when { expression {return params.config_changed}}
+      when { expression {return env.config_changed == true}}
       steps {
         sh 'camp realize -d .'
       }
     }
     stage ('pull request') {
-      when { expression {return params.config_changed}}
+      when { expression {return env.config_changed == true}}
       steps{
         sh 'git checkout -b amplifyconf-${GIT_BRANCH}-${BUILD_NUMBER}'
         sh 'git add out'
@@ -64,7 +64,7 @@ pipeline {
 
     stage('execute tests') {
       steps {
-        when { expression {return (params.config_changed == false) }}
+        when { expression {return (env.config_changed == false) }}
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
           sh '''cd lutece-form-test
           mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
