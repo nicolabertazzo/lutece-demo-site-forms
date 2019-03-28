@@ -4,7 +4,7 @@ pipeline {
   stages {
 
     stage('camp generate') {
-      when { changeset "camp.yml" }
+      when { changeset "camp.yml|template/**" }
       steps {
         script{
           if (fileExists('out')) {
@@ -15,22 +15,29 @@ pipeline {
       }
     }
     stage('camp realize') {
-      when { changeset "camp.yml" }
+      when { changeset "camp.yml|template/**" }
       steps {
         sh 'camp realize -d .'
+      }
+    }
+    stage ('pull request') {
+      when { changeset "camp.yml|template/**"}
+      steps{
+        sh 'git checkout -b amplifyconf-${GIT_BRANCH}-${BUILD_NUMBER}'
         sh 'git add out'
-        sh 'git commit -m "updated camp configurations"'
+        sh 'git commit -m "added camp configurations"'
         // CREDENTIALID
         withCredentials([usernamePassword(credentialsId: 'github-user-password', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
           // REPOSITORY URL  
           sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@${GIT_URL}')
+          withEnv(['GITHUB_USER=${GIT_USERNAME}','GITHUB_PASSWORD=${GIT_PASSWORD}']) {
+          sh 'hub pull-request -m "Amplify pull request from build ${BUILD_NUMBER} on ${GIT_BRANCH}"'
+          }
         }
-        script{
-          currentBuild.result = 'SUCCESS'
-          return
-        }
+        return
       }
     }
+
     stage('execute tests') {
       steps {
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
