@@ -28,7 +28,7 @@ pipeline {
     }
 
     stage('camp generate') {
-      when { expression {params.config_changed == true}}
+      when { expression {return params.config_changed}}
       steps {
         script{
           if (fileExists('out')) {
@@ -39,13 +39,13 @@ pipeline {
       }
     }
     stage('camp realize') {
-      when { expression {params.config_changed == true}}
+      when { expression {return params.config_changed}}
       steps {
         sh 'camp realize -d .'
       }
     }
     stage ('pull request') {
-      when { expression {params.config_changed == true}}
+      when { expression {return params.config_changed}}
       steps{
         sh 'git checkout -b amplifyconf-${GIT_BRANCH}-${BUILD_NUMBER}'
         sh 'git add out'
@@ -63,8 +63,7 @@ pipeline {
 
     stage('execute tests') {
       steps {
-        //when { expression {params.config_changed == false }}
-        echo "Config Changed value = ${params.config_changed}"
+        when { expression {return (params.config_changed == false) }}
         withMaven(maven: 'MVN3', jdk: 'JDK8') {
           sh '''cd lutece-form-test
           mvn clean test -DcampOutPath="${WORKSPACE}/out"'''
