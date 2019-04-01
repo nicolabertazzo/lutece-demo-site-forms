@@ -1,0 +1,11 @@
+dist: trusty
+group: edge
+language: java
+sudo: required
+jdk: openjdk8
+
+script:
+- docker run -it -v $(pwd):/camp/workspace fchauvel/camp:latest camp generate -d workspace --all
+- docker run -it -v $(pwd):/camp/workspace fchauvel/camp:latest camp realize -d workspace
+- cd lutece-form-test
+- mvn clean test -DcampOutPath="${TRAVIS_BUILD_DIR}/out"
