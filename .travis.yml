@@ -4,6 +4,10 @@ language: java
 sudo: required
 jdk: openjdk8
 
+cache:
+directories:
+- $HOME/.m2
+
 script:
 - docker run -it -v $(pwd):/camp/workspace fchauvel/camp:latest camp generate -d workspace --all
 - docker run -it -v $(pwd):/camp/workspace fchauvel/camp:latest camp realize -d workspace
